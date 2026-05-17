@@ -1,6 +1,6 @@
 {
   "name": "@swarmai/desktop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cross-platform desktop control tools (clipboard, screenshot, windows, system, Android via Termux+Shizuku)",
   "type": "module",
   "main": "./dist/index.js",
