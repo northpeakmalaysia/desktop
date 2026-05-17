@@ -1,0 +1,25 @@
+# SwarmAI Desktop Control plugin — doc 15 §4.
+# 27+ tools for clipboard, screenshot, window mgmt, app launch, system info,
+# battery, volume, brightness, caffeinate. Cross-platform: macOS, Linux,
+# Windows, Android (Termux + Shizuku).
+id: '@swarmai/desktop'
+version: '0.1.0'
+kind: 'tool'
+entry: './dist/index.js'
+permissions:
+  network: none
+  filesystem: read-write   # screenshots, log files
+  secrets: []
+capabilities:
+  - 'tool:register'
+  - 'subprocess:spawn'
+  - 'native:clipboard'
+  - 'native:screen-capture'
+  - 'native:window-management'
+  - 'native:notifications'
+platforms:
+  - darwin
+  - linux
+  - win32
+  - android   # via Termux + Shizuku
+androidNote: 'Requires pkg install termux-api + Termux:API APK; Shizuku required for screenshot, app launch, brightness, wifi/bluetooth/screen lock/call/sms.'
